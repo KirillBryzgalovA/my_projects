@@ -9,16 +9,17 @@
 #         print(sym, counter)
 #
 # strcounter('aabc')
+#
+# def strcounter(s):  # aab  O(N + M) => O(N + N) => O(2N) => O(N)
+#     syms_counter = {}
+#     for sym in s:   # aab
+#        syms_counter[sym] = syms_counter.get(sym, 0) + 1
+#
+#     for sym, count in syms_counter.items():
+#         print(sym, count)
+#
+# strcounter('aaaaaaabbbbbbcddddd')
 
-def strcounter(s):  # aab  O(N + M) => O(N + N) => O(2N) => O(N)
-    syms_counter = {}
-    for sym in s:   # aab
-       syms_counter[sym] = syms_counter.get(sym, 0) + 1
-
-    for sym, count in syms_counter.items():
-        print(sym, count)
-
-strcounter('aaaaaaabbbbbbcddddd')
 
 
         # 2 УРОК
