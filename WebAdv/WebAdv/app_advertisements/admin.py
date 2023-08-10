@@ -1,13 +1,14 @@
 from django.contrib import admin
 from .models import Advertisement
 
+
 class AdvertisementAdmin(admin.ModelAdmin):
-    list_display = ['id', 'red_title', 'description', 'price', 'created_date', 'auction']
+    list_display = ['id', 'title', 'description', 'price', 'created_date', 'updated_date', 'auction', 'user', 'image']
     list_filter = ['auction', 'created_at']
     actions = ['make_auction_as_false', 'make_auction_as_true']
     fieldsets = (
         ('Общее', {
-            'fields': ('title', 'description')
+            'fields': ('title', 'description', 'image')
         }),
         ('Финансы', {
             'fields': ('price', 'auction'),
@@ -25,3 +26,4 @@ class AdvertisementAdmin(admin.ModelAdmin):
 
 
 admin.site.register(Advertisement, AdvertisementAdmin)
+
