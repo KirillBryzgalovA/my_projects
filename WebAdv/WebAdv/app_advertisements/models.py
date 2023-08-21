@@ -3,6 +3,7 @@ from django.contrib import admin
 from django.utils.html import format_html
 from django.utils import timezone
 from django.contrib.auth import get_user_model
+from django.contrib.auth.forms import UserCreationForm
 
 User = get_user_model()
 
@@ -39,4 +40,9 @@ class Advertisement(models.Model):
         return f"Advertisement(id={self.id}, title={self.title}, price={self.price})"
     
     class Meta:
-        db_table = "advertisements"  
+        db_table = "advertisements"
+
+    class CustomUserCreationForm(UserCreationForm):
+
+        class Meta(UserCreationForm.Meta):
+            model = User
