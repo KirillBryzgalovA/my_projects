@@ -17,7 +17,7 @@
     </a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="advertisement-post.html">
+    <a class="nav-link" href="{% url 'adv-post' %}">
       <span style="font-weight: bold;">Разместить объявление</span>
     </a>
   </li>
@@ -27,12 +27,12 @@
     </a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="login.html">
+    <a class="nav-link" href="{% url 'login' %}">
       <span style="font-weight: bold;">Войти</span>
     </a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="profile.html">
+    <a class="nav-link" href="{% url 'profile' %}">
       <span style="font-weight: bold;">Профиль</span>
     </a>
   </li>
@@ -42,6 +42,7 @@
     </a>
   </li>
 </ul>
+
 
 <div id="carouselExampleControls" class="carousel slide bg-primary" data-bs-ride="carousel">
   <div class="carousel-inner">
